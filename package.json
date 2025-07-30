@@ -1,5 +1,11 @@
 {
   "name": "coveo-atomic-extension",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/galaverdyan-coveo/coveo-atomic-extension.git"},
+  "author": {
+    "name": "gevorg alaverdyan"
+  },
   "displayName": "coveo-atomic-extension",
   "description": "Autocomplete for Coveo Atomic components",
   "version": "0.0.1",
