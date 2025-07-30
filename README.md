@@ -1,65 +1,57 @@
-# coveo-atomic-extension README
+# Coveo Atomic IntelliSense README
 
-This is the README for your extension "coveo-atomic-extension". After writing up a brief description, we recommend including the following sections.
+Boost your productivity when building Coveo Atomic search interfaces with intelligent autocompletion and documentation directly in your HTML files. 🚀
+
+This extension provides comprehensive support for Coveo Atomic web components, making it faster and easier to write clean, accurate code.
+
+-----
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+This extension provides rich IntelliSense for Coveo Atomic components within your HTML files.
 
-For example if there is an image subfolder under your extension project workspace:
+### 1\. Attribute Autocompletion
 
-\!\[feature X\]\(images/feature-x.png\)
+Automatically get suggestions for valid attributes as you type inside Coveo Atomic component tags. This helps you write code faster and avoid typos.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+### 2\. Instant Documentation on Hover
+
+Simply hover over any Atomic attribute to see a detailed description of its purpose, accepted values, and default settings. This saves you from having to constantly switch to the official documentation.
+
+### 3\. Comprehensive Component Coverage
+
+Get IntelliSense for a wide range of Coveo Atomic components, including:
+
+  * `atomic-facet`, `atomic-numeric-facet`, `atomic-timeframe-facet`, etc.
+  * `atomic-result-list`, `atomic-result-template`, `atomic-folded-result-list`, etc.
+  * `atomic-search-box`, `atomic-search-interface`, `atomic-sort-dropdown`, etc.
+  * ...and many more\!
+
+-----
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+There are no external dependencies or special requirements for this extension. Simply install it from the VS Code Marketplace and open an HTML file to get started.
+
+-----
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+This extension does not contribute any VS Code settings at this time.
 
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+-----
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+There are no known issues at this time. Please report any bugs or unexpected behavior on the GitHub repository issues page for this extension.
+
+-----
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
-Initial release of ...
+Initial release of **Coveo Atomic IntelliSense**.
 
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+  * Added attribute autocompletion for all major Coveo Atomic components.
+  * Added hover-based documentation for component attributes.
