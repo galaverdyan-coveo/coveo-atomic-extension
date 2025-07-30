@@ -1,5 +1,6 @@
 {
   "name": "coveo-atomic-extension",
+  "publisher": "GevorgAlaverdyan",
   "repository": {
     "type": "git",
     "url": "https://github.com/galaverdyan-coveo/coveo-atomic-extension.git"},
