@@ -3,9 +3,11 @@
   "publisher": "GevorgAlaverdyan",
   "repository": {
     "type": "git",
-    "url": "https://github.com/galaverdyan-coveo/coveo-atomic-extension.git"},
+    "url": "https://github.com/galaverdyan-coveo/coveo-atomic-extension.git"
+  },
+  "license": "CC-BY-4.0",
   "author": {
-    "name": "gevorg alaverdyan"
+    "name": "Gevorg Alaverdyan"
   },
   "displayName": "Coveo Atomic Extension",
   "icon": "images/coveo.png",

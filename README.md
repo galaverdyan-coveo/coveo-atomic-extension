@@ -55,3 +55,9 @@ Initial release of **Coveo Atomic IntelliSense**.
 
   * Added attribute autocompletion for all major Coveo Atomic components.
   * Added hover-based documentation for component attributes.
+
+## License
+
+This extension is licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+
+You are free to use, modify, and distribute it — even for commercial purposes — as long as you give credit to **Gevorg Alaverdyan**.
