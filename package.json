@@ -7,7 +7,8 @@
   "author": {
     "name": "gevorg alaverdyan"
   },
-  "displayName": "coveo-atomic-extension",
+  "displayName": "Coveo Atomic Extension",
+  "icon": "images/coveo.png",
   "description": "Autocomplete for Coveo Atomic components",
   "version": "0.0.1",
   "engines": {
