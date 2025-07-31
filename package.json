@@ -10,9 +10,9 @@
     "name": "Gevorg Alaverdyan"
   },
   "displayName": "Coveo Atomic Extension",
-  "icon": "images/coveo.png",
+  "icon": "./coveo.png",
   "description": "Autocomplete for Coveo Atomic components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.102.0"
   },
