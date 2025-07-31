@@ -335,6 +335,137 @@ const ATOMIC_COMPONENTS = {
         { name: "tabs-excluded", documentation: "The tabs on which this facet must not be displayed, as a JSON string. e.g., '[\"tabIDA\", \"tabIDB\"]'." },
         { name: "tabs-included", documentation: "The tabs on which the facet can be displayed, as a JSON string. e.g., '[\"tabIDA\", \"tabIDB\"]'." },
         { name: "with-date-picker", documentation: "Whether this facet should contain a datepicker for custom ranges. Default: false." }
+    ],
+    // result-template-components
+    "atomic-field-condition": [
+        { name: "if-defined", documentation: "A comma-separated list of fields that must have a value for this condition to apply." },
+        { name: "if-not-defined", documentation: "A comma-separated list of fields that must not have a value for this condition to apply." },
+        { name: "must-match", documentation: "The field and values for which this condition must apply. e.g., must-match-filetype=\"pdf,doc\"." },
+        { name: "must-not-match", documentation: "The field and values for which this condition must not apply. e.g., must-not-match-author=\"John Doe\"." }
+    ],
+    "atomic-quickview": [
+        { name: "sandbox", documentation: "The sandbox attribute for the quickview iframe. `allow-same-origin` is required. Default: 'allow-popups allow-top-navigation allow-same-origin'." }
+    ],
+    "atomic-result-badge": [
+        { name: "field", documentation: "The result field to display in the badge. Incompatible with `label`." },
+        { name: "icon", documentation: "Specifies an icon to display. Supports URL (http, https, ./), Atomic assets (assets://), or a stringified SVG." },
+        { name: "label", documentation: "The static text to display in the badge. Incompatible with `field`." }
+    ],
+    "atomic-result-date": [
+        { name: "field", documentation: "The result field containing the date value. Default: 'date'." },
+        { name: "format", documentation: "The format to apply to the date, using day.js syntax. Default: 'D/M/YYYY'." },
+        { name: "relative-time", documentation: "Whether the date should be displayed in a relative time format (e.g., '2 hours ago')." }
+    ],
+    "atomic-result-fields-list": [],
+    "atomic-result-html": [
+        { name: "field", documentation: "The result field containing the HTML to display. (Required)." },
+        { name: "sanitize", documentation: "Whether the content should be sanitized using DOMPurify to prevent XSS attacks. Default: true." }
+    ],
+    "atomic-result-icon": [],
+    "atomic-result-image": [
+        { name: "fallback", documentation: "An optional fallback image URL to use if the primary image is unavailable." },
+        { name: "field", documentation: "The result field containing the image URL. (Required)." },
+        { name: "image-alt-field", documentation: "The result field containing the alt text for the image." }
+    ],
+    "atomic-result-link": [
+        { name: "href-template", documentation: "A template literal to generate the href attribute, allowing for dynamic links based on result properties. e.g., `${clickUri}?id=${raw.itemtitle}`." }
+    ],
+    "atomic-result-localized-text": [
+        { name: "field", documentation: "A dynamic attribute that maps a result field to a localization parameter. e.g., `field-author=\"name\"` assigns the 'author' field value to the 'name' parameter in the translation." },
+        { name: "field-count", documentation: "The numerical result field to use for pluralization." },
+        { name: "locale-key", documentation: "The i18n translation key to use. (Required)." }
+    ],
+    "atomic-result-multi-value-text": [
+        { name: "delimiter", documentation: "The delimiter to use for splitting values if the field is not indexed as multi-value." },
+        { name: "field", documentation: "The multi-value result field to display. (Required)." },
+        { name: "max-values-to-display", documentation: "The maximum number of values to display before showing a 'n more...' message. Default: 3." }
+    ],"atomic-result-number": [
+        { name: "field", documentation: "The result field containing the number to display. (Required)." }
+    ],
+    "atomic-result-printable-uri": [
+        { name: "max-number-of-parts", documentation: "The maximum number of URI parts to display before using an ellipsis. Default: 5." }
+    ],
+    "atomic-result-rating": [
+        { name: "field", documentation: "The result field containing the rating value. (Required)." },
+        { name: "icon", documentation: "The SVG icon for the rating. Supports URL, Atomic assets (assets://), or a stringified SVG. Default: 'Star'." },
+        { name: "max-value-in-index", documentation: "The maximum value of the rating field, which also determines the number of icons to display. Default: 5." }
+    ],
+    "atomic-result-section-actions": [],
+    "atomic-result-section-badges": [],
+    "atomic-result-section-bottom-metadata": [],
+    "atomic-result-section-children": [],
+    "atomic-result-section-emphasized": [],
+    "atomic-result-section-excerpt": [],
+    "atomic-result-section-title": [],
+    "atomic-result-section-title-metadata": [],
+    "atomic-result-section-visual": [
+        { name: "image-size", documentation: "How large or small the visual section of results should be. ('icon', 'large', 'none', 'small')." }
+    ],
+    "atomic-result-text": [
+        { name: "default", documentation: "The locale key for the text to display if the specified field has no value." },
+        { name: "field", documentation: "The result field containing the text to display. (Required)." },
+        { name: "should-highlight", documentation: "Whether the component should highlight text based on the search API's highlighting properties. Default: true." }
+    ],
+    "atomic-result-timespan": [
+        { name: "field", documentation: "The result field containing the timespan value. (Required)." },
+        { name: "format", documentation: "The format to apply to the timespan, using day.js duration syntax." },
+        { name: "unit", documentation: "The unit of measurement for the field value (e.g., 'ms', 's', 'd'). Default: 'ms'." }
+    ],
+    "atomic-recs-error": [],
+    "atomic-recs-interface": [
+        { name: "csp-nonce", documentation: "The nonce for inline scripts and styles to comply with Content Security Policy (CSP)." },
+        { name: "analytics", documentation: "Whether analytics should be enabled. Default: true." },
+        { name: "fields-to-include", documentation: "A JSON string array of non-default fields to include in results. e.g., '[\"fieldA\", \"fieldB\"]'." },
+        { name: "icon-assets-path", documentation: "The path to the icon assets folder. Default: './assets'." },
+        { name: "language", documentation: "The language for the interface. Default: 'en'." },
+        { name: "language-assets-path", documentation: "The path to the language assets folder. Default: './lang'." },
+        { name: "log-level", documentation: "The severity level of messages to log to the console. ('debug', 'error', 'info', ...)." },
+        { name: "pipeline", documentation: "The query pipeline to use for the recommendations interface." },
+        { name: "search-hub", documentation: "The search hub to use for the recommendations interface." },
+        { name: "timezone", documentation: "The tz database identifier for the timezone (e.g., 'America/Montreal'). Guessed by default." }
+    ],
+    "atomic-recs-list": [
+        { name: "density", documentation: "The spacing of elements in the result list. ('comfortable', 'compact', 'normal'). Default: 'normal'." },
+        { name: "display", documentation: "The layout to apply to results. ('grid', 'list'). Default: 'list'." },
+        { name: "heading-level", documentation: "The heading level (1-6) for the list's label. Default: 0." },
+        { name: "image-size", documentation: "The expected size of the image in results. ('icon', 'large', 'none', 'small'). Default: 'small'." },
+        { name: "label", documentation: "The non-localized label for the list of recommendations." },
+        { name: "number-of-recommendations", documentation: "The total number of recommendations to display. Default: 10." },
+        { name: "number-of-recommendations-per-page", documentation: "The number of recommendations per page. Setting this activates the carousel." },
+        { name: "recommendation", documentation: "The Recommendation identifier from the Coveo platform. Default: 'Recommendation'." }
+    ],
+    "atomic-recs-result": [
+        { name: "classes", documentation: "A space-delimited list of classes to add to the result element." },
+        { name: "density", documentation: "The size of the results. ('comfortable', 'compact', 'normal'). Default: 'normal'." },
+        { name: "display", documentation: "The layout to apply to display results. ('grid', 'list', 'table'). Default: 'list'." },
+        { name: "image-size", documentation: "The size of the visual section in result list items. ('icon', 'large', 'none', 'small'). Default: 'icon'." },
+        { name: "stop-propagation", documentation: "Whether an atomic-result-link inside this result should stop click event propagation." }
+    ],
+    "atomic-rec-result-template": [
+        { name: "if-defined", documentation: "A comma-separated list of fields that must be defined for this template to apply." },
+        { name: "if-not-defined", documentation: "A comma-separated list of fields that must NOT be defined for this template to apply." },
+        { name: "must-match", documentation: "The field and values for which this template must apply. e.g., `must-match-filetype=\"pdf,doc\"`." },
+        { name: "must-not-match", documentation: "The field and values for which this template must not apply. e.g., `must-not-match-author=\"John Doe\"`." }
+    ],
+    "atomic-icon": [
+        { name: "icon", documentation: "The SVG icon to display. Supports URL (http, https, ./), Atomic assets (assets://), or a stringified SVG. (Required)." }
+    ],
+    "atomic-layout-section": [
+        { name: "max-width", documentation: "For column sections, the maximum horizontal space it should take (e.g., '300px')." },
+        { name: "min-width", documentation: "For column sections, the minimum horizontal space it should take (e.g., '300px')." },
+        { name: "section", documentation: "The name of the layout section. ('facets', 'main', 'search', 'status', etc.). (Required)." }
+    ],
+    "atomic-numeric-range": [
+        { name: "end", documentation: "The ending value for the numeric range. (Required)." },
+        { name: "end-inclusive", documentation: "Whether the end value should be included in the range. Default: false." },
+        { name: "label", documentation: "The non-localized label for the facet, which will appear in the breadbox." },
+        { name: "start", documentation: "The starting value for the numeric range. (Required)." }
+    ],
+    "atomic-timeframe": [
+        { name: "amount", documentation: "The number of units for the timeframe. Default: 1." },
+        { name: "label", documentation: "The non-localized label for the timeframe, which will appear in the breadbox." },
+        { name: "period", documentation: "The relative period of time. ('next', 'past'). Default: 'past'." },
+        { name: "unit", documentation: "The unit of time for the timeframe. ('day', 'hour', 'minute', 'month', 'quarter', 'week', 'year'). (Required)." }
     ]
 };
 

@@ -16,8 +16,8 @@ function activate(context) {
             const linePrefix = document.lineAt(position).text.substr(0, position.character);
 
             // --- Tag Name Completion ---
-            // Check if the user is typing a tag name (e.g., <atomic-)
-            if (linePrefix.endsWith('<atomic-')) {
+            // Check if the user is typing a tag name (e.g., <ato)
+            if (linePrefix.endsWith('<ato')) {
                 // Return a completion item for each Atomic component
                 return Object.keys(ATOMIC_COMPONENTS).map(componentName => {
                     const snippetCompletion = new vscode.CompletionItem(componentName);
